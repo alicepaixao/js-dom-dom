@@ -1,0 +1,35 @@
+<!--
+    Interagir com as do HTML
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM com JS</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Tinder</h1>
+    <button onclick="inicio()">Iniciar uma conversa</button>
+    <!-- A função da linha 16. Ele será criada é função é JS-->
+    <section id="resultado">
+
+     <p> Resultado</p>
+
+    </section>
+    <script>
+         function inicio() {
+         let cidade = window.prompt('Aonde você mora?')
+         //let resposta = window.document.getElementById('resposta')
+         // Exemplo de outra forma de fazer
+         let resposta = window.document.querySelector('section#resultado')
+         resposta.innerHTML = `<p> Eu acho, <strong> ${cidade} </strong>! Uma cidade legal! </p>`
+
+         }
+
+    </script>
+</body>
+</html>
